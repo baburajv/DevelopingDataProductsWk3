@@ -1,0 +1,21 @@
+---
+title: "Developing Data Products Week3 Plotly Assignment"
+author: "Baburaj Velayudhan"
+date: "January 19, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This page shows a plot of mtcars dataset using the plotly library.
+
+```{r, echo=FALSE, message=FALSE}
+library(plotly)
+data(mtcars)
+plot_ly(mtcars, x = ~wt, y = ~mpg, mode="markers", color = ~disp, size = ~hp)
+
+```
